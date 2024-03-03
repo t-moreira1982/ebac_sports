@@ -14,12 +14,3 @@ const api = createApi({
 
 export const { useGetProdutosQuery } = api
 export default api
-
-// const [produtos, setProdutos] = useState<Produto[]>([])
-//   const [favoritos, setFavoritos] = useState<Produto[]>([])
-
-//   useEffect(() => {
-//     fetch('https://fake-api-tau.vercel.app/api/ebac_sports')
-//       .then((res) => res.json())
-//       .then((res) => setProdutos(res))
-//   }, [])

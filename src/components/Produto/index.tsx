@@ -7,7 +7,7 @@ import { favoritar } from '../../store/reducers/favoritos'
 
 type Props = {
   produto: ProdutoType
-  estaNosFavoritos: boolean
+  // estaNosFavoritos: boolean
 }
 
 export const paraReal = (valor: number) =>
@@ -15,7 +15,7 @@ export const paraReal = (valor: number) =>
     valor
   )
 
-const ProdutoComponent = ({ produto, estaNosFavoritos }: Props) => {
+const ProdutoComponent = ({ produto /*, estaNosFavoritos*/ }: Props) => {
   const dispatch = useDispatch()
 
   return (
@@ -28,9 +28,9 @@ const ProdutoComponent = ({ produto, estaNosFavoritos }: Props) => {
         <strong>{paraReal(produto.preco)}</strong>
       </S.Prices>
       <S.BtnComprar onClick={() => dispatch(favoritar(produto))} type="button">
-        {estaNosFavoritos
+        {/* {estaNosFavoritos
           ? '- Remover dos favoritos'
-          : '+ Adicionar aos favoritos'}
+          : '+ Adicionar aos favoritos'} */}
       </S.BtnComprar>
       <S.BtnComprar onClick={() => dispatch(adicionar(produto))} type="button">
         Adicionar ao carrinho
